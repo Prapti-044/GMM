@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# GMM
+
+<!-- badges: start -->
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![GitHub repo size](https://img.shields.io/github/repo-size/rahatzamancse/linux-dots?color=green&logo=github) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rahatzamancse/linux-dots?color=green) ![GitHub language count](https://img.shields.io/github/languages/count/rahatzamancse/linux-dots) ![GitHub top language](https://img.shields.io/github/languages/top/rahatzamancse/linux-dots)
+<!-- badges: end -->
+
+The goal of GMM is to learn how to create an R-package by implementing [Gaussian Mixture Model](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model) for clustering a dataset.
+
+_Note_: This RMarkdown is created following the guidelines of [this R-package example](https://github.com/mvuorre/exampleRPackage).
+
+## Installation
+
+You can only install the development version from [this repository](https://github.com/Prapti-044/GMM) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Prapti-044/GMM")
+```
+## Example
+
+This is a basic example which shows you how to cluster the iris dataset:
+
+```{r example}
+library(GMM)
+result <- apply.GMM(as.matrix(iris[,-5]), 3)
+str(result)
+```
